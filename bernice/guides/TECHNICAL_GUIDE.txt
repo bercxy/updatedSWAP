@@ -1,0 +1,70 @@
+TECHNICAL GUIDE – IMPLEMENTATION DETAILS
+
+--------------------------------
+1. SESSION HANDLING
+--------------------------------
+- PHP sessions are used to store:
+  - user_id
+  - username
+  - role
+
+- This allows simple role-based access control.
+
+--------------------------------
+2. ROLE PROTECTION
+--------------------------------
+admin_guard.php checks:
+- Whether a session exists
+- Whether the role is admin or supervisor
+
+If not authorised, access is blocked.
+
+--------------------------------
+3. DATABASE DESIGN
+--------------------------------
+Main table used: bookings
+
+Fields:
+- booking_id (Primary Key)
+- user_id
+- facility_id
+- booking_date
+- start_time
+- end_time
+- status (pending / approved / rejected)
+
+--------------------------------
+4. APPROVE BOOKING LOGIC
+--------------------------------
+approve_booking.php:
+1. Fetches booking details
+2. Re-checks time conflicts
+3. Uses a database transaction
+4. Approves booking only if no conflict exists
+
+This improves reliability and prevents race conditions.
+
+--------------------------------
+5. REJECT BOOKING LOGIC
+--------------------------------
+reject_booking.php:
+- Simple status update
+- Only allows rejection of pending bookings
+
+No conflict check needed.
+
+--------------------------------
+6. UI DESIGN DECISIONS
+--------------------------------
+- Clean and minimal design
+- Clear status badges (colour-coded)
+- Action buttons only shown for pending bookings
+- Consistent alignment for table rows
+
+--------------------------------
+7. DESIGN CHOICES
+--------------------------------
+- No frameworks used
+- Pure HTML, CSS, PHP, MySQL
+- Kept intentionally simple and readable
+- Focused on assignment requirements

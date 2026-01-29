@@ -1,0 +1,55 @@
+================================================================================
+COMPLETE PACKAGE CONTENTS
+================================================================================
+
+================================================================================
+📂 FOLDER STRUCTURE
+================================================================================
+
+projectDraft/                        ← Main project folder
+│
+├── database.sql                      ← SQL script to create database
+├── README.md                         ← Project documentation
+├── .htaccess                         ← Apache configuration
+│
+├── config/                           ← Configuration files
+│   ├── config.php                    ← Base URL setting and database connection
+│
+├── css/                              ← Stylesheets
+│   └── style.css                     ← All CSS styles
+│
+│
+├── pages/                            ← website pages
+│   ├── login.php                     ← Login form
+│   ├── requestAccount.php            ← Registration form for user accounts that will be reviewed and approved/reject by the admin
+│   |── process_request.php           ← php file to approve pending account requests and insert it into the users table when it is approved
+|   |── editusers.php                 ← Edit form for users accounts that are made
+|   |── adminDashboard.php            ← shows the pending requests to approve/reject and shows records in the users table (users table are the user accounts made)
+|   └── logout.php                    ← Logout page
+|
+|
+├── tests/                            ← Unit testing  
+│   ├── AdminRequestTest.php          ← Checks done: Admin can approve a user request, Request is inserted into users table correctly, Request is deleted from user_requests after approval
+│   ├── EditUserTest.php              ← Checks done: Admin can update user details (full name), Changes persist in the database, Dummy test user is cleaned up after test
+│   |── LoginTest.php                 ← Checks done: Login succeeds for valid credentials, Login fails for invalid credentials, Passwords are verified correctly with password_verify(), check whether role is correct
+|   └── RequestTest.php               ← Checks done: User requests are inserted into user_requests table, Validations work (Contact number must be 8 digits, Password and confirm password must match), test requests are cleaned up after test
+|
+|
+└── guides/                           ← Documentation files
+    ├── START_HERE.txt                ← Getting started guide
+    ├── TECHNICAL_GUIDE.txt           ← Concepts and best practices
+    └── PACKAGE_CONTENTS.txt          ← This file
+
+IMPORTANT NOTES:
+- If you rename the project folder, update BASE_URL in config/config.php
+- All PHP files contain inline comments explaining the code
+- The guides/ folder contains learning resources
+
+================================================================================
+📖 RECOMMENDED READING ORDER
+================================================================================
+
+1. START_HERE.txt        → Complete setup and learning path
+2. PACKAGE_CONTENTS.txt  → Understand folder structure (this file)
+3. TECHNICAL_GUIDE.txt   → Learn concepts and best practices
+4. Explore PHP files     → Read inline code comments

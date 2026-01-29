@@ -1,0 +1,61 @@
+PACKAGE CONTENT OVERVIEW
+
+This document explains what each folder/file is used for.
+
+--------------------------------
+ROOT FILES
+--------------------------------
+login.php
+- Temporary demo login page
+- Sets session variables (user_id, role)
+
+database.sql
+- SQL file to create database and bookings table
+- Includes sample data
+
+.htaccess
+- Basic configuration (if applicable)
+
+README.md
+- Project overview (optional)
+
+--------------------------------
+CONFIG FOLDER
+--------------------------------
+config/config.php
+- Database connection settings
+
+--------------------------------
+INCLUDES FOLDER
+--------------------------------
+admin_guard.php
+- Restricts admin pages to admin/supervisor roles
+
+booking_rules.php
+- Contains booking conflict checking logic
+
+header.php / footer.php
+- Shared layout components (if used)
+
+--------------------------------
+PAGES / ADMIN FOLDER
+--------------------------------
+view_all_bookings.php
+- Admin page to view all bookings
+- Shows status and action buttons
+
+approve_booking.php
+- Approves a booking
+- Re-checks time conflicts before approval
+
+reject_booking.php
+- Rejects a booking
+- Updates status directly
+
+--------------------------------
+CSS FOLDER
+--------------------------------
+css/style.css
+- Styling for login page
+- Styling for admin bookings table
+- Button colours and status badges

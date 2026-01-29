@@ -1,0 +1,102 @@
+================================================================================
+GETTING STARTED
+================================================================================
+
+========================================
+⚡ QUICK SETUP (5 MINUTES)
+========================================
+
+STEP 1: Start XAMPP
+-------------------
+1. Open XAMPP Control Panel
+2. Click "Start" next to Apache
+3. Click "Start" next to MySQL
+4. Both should show green "Running" status
+
+STEP 2: Copy Project
+--------------------
+Extract and copy the entire folder to your XAMPP htdocs directory:
+- Windows: C:\xampp\htdocs\
+
+
+STEP 3: Create Database
+-----------------------
+1. Open browser: http://localhost/phpmyadmin
+2. Click "SQL" tab
+3. Open database.sql file from project folder
+4. Copy ALL the SQL code
+5. Paste into phpMyAdmin SQL box
+6. Click "Go" button
+7. Verify "amc_db" appears in left sidebar
+
+STEP 4: Configure Base URL
+---------------------------
+IMPORTANT: Update the BASE_URL to match your folder name!
+
+1. Open: config/config.php
+2. Find: $base = '/projectDraft';
+
+
+STEP 5: Open the Website
+-------------------------
+1. Open browser
+2. Go to: http://localhost/projectDraft/pages/login.php
+3. You should see a login page, login and navigate between the different pages
+
+✅ SUCCESS!
+
+
+========================================
+📚 LEARNING PATH
+========================================
+
+STEP 1: EXPLORE THE APP
+-----------------------
+• Add a product
+• Edit a product
+• Delete a product
+• Navigate between pages
+• Open browser DevTools (F12) to see how it works
+
+STEP 2: UNDERSTAND THE CODE
+---------------------------
+Start with these files in order:
+1. pages/login.php - login form 
+2. pages/requestAccount.php - registration form where users requests for an account
+3. pages/adminDashboard.php - user requests and existing users will be shown
+                            - admin can assign the user request a role before approving/rejecting it
+                            - when it is approved, the user request gets deleted from the user_requests table; when it is rejected, the user request gets deleted from the user_requests table
+                            - admin can edit an existing user account by clicking on the edit button and gets directed to editusers.php
+4. pages/editusers.php - edit form for existing user accounts
+5. pages/process_request - processes what happens when admin click on approve/reject for user requests
+6. pages/logout.php - redirects admin back to login page after clicking logout
+7. css/style.css - Styling
+
+All files have inline comments explaining the code!
+
+
+STEP 4: READ THE GUIDES
+-----------------------
+• TECHNICAL_GUIDE.txt - Concepts and best practices
+• PACKAGE_CONTENTS.txt - Complete package overview
+• README.md - Project documentation
+
+
+================================================================================
+📝 FINAL NOTES
+================================================================================
+
+This package is designed as a complete learning resource for students building
+secure web applications. Take your time and don't rush through it.
+
+REMEMBER:
+- It's okay to not understand everything immediately
+- Confusion is part of the learning process
+- Every expert was once a beginner
+- Making mistakes is how you learn
+- Practice is more important than theory
+
+The actual code files contain detailed inline comments that explain the
+implementation. This guide package focuses on concepts and organization.
+
+Good luck on your coding journey! 🚀

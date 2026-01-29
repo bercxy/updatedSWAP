@@ -1,0 +1,12 @@
+{
+  "require-dev": {
+    "phpunit/phpunit": "^10.0"
+  },
+  "autoload": {
+    "files": [
+      "config.php",
+      "prioritisation.php",
+      "batch.php"
+    ]
+  }
+}

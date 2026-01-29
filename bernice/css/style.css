@@ -1,0 +1,274 @@
+/* BASE RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* LAYOUT */
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* LOGIN PAGE */
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* BUTTONS (KEEP COLOURS) */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #45a049;
+}
+
+.btn-danger {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #da190b;
+}
+
+/* ADMIN PAGE HEADER */
+
+.admin-page-header {
+    background: #ffffff;
+    padding: 2.5rem 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.admin-page-header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.admin-subtitle {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+/* TABLE (VIEW BOOKINGS) */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th,
+table td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+table th {
+    background-color: #f1f3f5;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+table tr:hover td {
+    background-color: #fafafa;
+}
+
+/* STATUS BADGES */
+
+.status-badge {
+    padding: 0.35rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-approved {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* ACTIONS COLUMN ALIGNMENT */
+
+.admin-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 48px;
+}
+
+.admin-actions .btn {
+    min-width: 90px;
+    height: 38px;
+}
+
+/* Dash placeholder */
+
+.no-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    height: 38px;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+/* ADMIN MAINPAGE */
+        .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2f2f2f;
+    padding: 1.2rem 2rem;
+}
+
+.nav-bar-left h1 {
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* RIGHT SIDE BUTTON GROUP */
+.nav-bar-right {
+    display: flex;
+    gap: 12px;
+}
+
+/* BUTTON STYLE */
+.nav-btn {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50;
+    transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #45a049;
+}
+
+/* LOGOUT = RED */
+.nav-btn.logout {
+    background-color: #f44336;
+}
+
+.nav-btn.logout:hover {
+    background-color: #da190b;
+}
+
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        .page-container {
+            padding: 60px;
+        }
+
+        .admin-main {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .admin-card {
+            background: #ffffff;
+            padding: 35px;
+            width: 320px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+            text-align: center;
+        }
+
+        .admin-card h2 {
+            margin-bottom: 15px;
+        }
+
+        .admin-card p {
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .admin-card a {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #4a90e2;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .admin-card a:hover {
+            background: #357ABD;
+        }

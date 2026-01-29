@@ -1,0 +1,56 @@
+START HERE – HOW TO RUN THE PROJECT
+
+This is a simple demo project for a facility booking approval system.
+It focuses on the admin approval / rejection workflow.
+
+--------------------------------
+1. REQUIREMENTS
+--------------------------------
+- XAMPP (Apache + MySQL)
+- Web browser (Chrome / Edge)
+- phpMyAdmin
+
+--------------------------------
+2. SETUP STEPS
+--------------------------------
+1. Place the project folder inside:
+   C:\xampp\htdocs\
+
+2. Start Apache and MySQL from XAMPP Control Panel.
+
+3. Open phpMyAdmin:
+   http://localhost/phpmyadmin
+
+4. Import the database:
+   - Click "Import"
+   - Select database.sql
+   - Click "Go"
+
+--------------------------------
+3. RUNNING THE PROJECT
+--------------------------------
+1. Open browser and go to:
+   http://localhost/sample_project/login.php
+
+2. Use the temporary login:
+   - Username: admin_demo
+   - Role: Admin or Supervisor
+
+3. After login, you will be redirected to:
+   Admin → View All Bookings page
+
+--------------------------------
+4. PROJECT SCOPE
+--------------------------------
+- This is a DEMO login (no real authentication).
+- Focus is on:
+  - Viewing bookings
+  - Approving bookings
+  - Rejecting bookings
+  - Status updates
+
+--------------------------------
+5. IMPORTANT NOTE
+--------------------------------
+This project is intentionally kept simple.
+Only relevant features required for the assignment are implemented.
