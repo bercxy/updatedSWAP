@@ -29,7 +29,7 @@ $facility_name = $_GET['facility_name'] ?? '';
     <div class="form-container">
         <h1>Facility Booking</h1>
 
-        <form method="POST" action="booking_action.php">
+<form method="POST" action="/booking_system/hazel/booking_action.php">
 
             <!-- User ID  -->
             <label for="user_id">User ID</label>

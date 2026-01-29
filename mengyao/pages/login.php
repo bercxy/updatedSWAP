@@ -32,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_email'] = $user['email'];
             $_SESSION['user_role'] = $user['role'];
+            $_SESSION['role']      = strtolower($user['role']);  
 
             // converts role value to lowercase to prevent case sensitivity issues like 'Admin' gets redirected to admin dashboard but 'admin' doesn't
             $role = strtolower($user['role']);

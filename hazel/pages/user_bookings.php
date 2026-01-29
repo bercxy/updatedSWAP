@@ -11,18 +11,18 @@ require_once "../db.php";
 $bookings = [];
 
 $sql = "
-  SELECT
-    b.booking_id,
-    f.facility_name,
-    b.booking_date,
-    b.start_time,
-    b.end_time,
-    b.purpose,
-    b.status,
-    b.created_at
-  FROM bookings b
-  JOIN facilities f ON b.facility_id = f.facility_id
-  ORDER BY b.booking_date DESC, b.start_time DESC
+SELECT
+  booking_id,
+  user_id,
+  facility_id,
+  booking_date,
+  start_time,
+  end_time,
+  purpose,
+  status,
+  created_at
+FROM bookings
+ORDER BY booking_date DESC, start_time DESC
 ";
 
 $result = $conn->query($sql);
@@ -83,7 +83,7 @@ $conn->close();
           <?php foreach ($bookings as $b): ?>
             <tr>
               <td><?php echo htmlspecialchars($b["booking_id"]); ?></td>
-              <td><?php echo htmlspecialchars($b["facility_name"]); ?></td>
+              <td><?php echo htmlspecialchars($b["facility_id"]); ?></td>
               <td><?php echo htmlspecialchars($b["booking_date"]); ?></td>
               <td>
                 <?php echo htmlspecialchars($b["start_time"]); ?>

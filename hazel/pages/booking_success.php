@@ -2,7 +2,7 @@
 // booking_success.php
 // Purpose: Landing / confirmation page after booking submission
 
-require_once "db.php"; // DB connection
+require_once __DIR__ . "/../db.php"; // DB connection
 
 // Get booking_id from URL
 $booking_id = $_GET["booking_id"] ?? "";
@@ -15,16 +15,20 @@ if ($booking_id === "" || !ctype_digit($booking_id)) {
 // Fetch booking details
 $stmt = $conn->prepare("
     SELECT 
-        b.booking_id,
-        f.facility_name,
-        b.booking_date,
-        b.start_time,
-        b.end_time,
-        b.status
-    FROM bookings b
-    JOIN facilities f ON b.facility_id = f.facility_id
-    WHERE b.booking_id = ?
+        booking_id,
+        user_id,
+        facility_id,
+        booking_date,
+        start_time,
+        end_time,
+        purpose,
+        status,
+        created_at
+    FROM bookings
+    WHERE booking_id = ?
+    LIMIT 1
 ");
+
 
 $stmt->bind_param("i", $booking_id);
 $stmt->execute();
@@ -72,7 +76,7 @@ $conn->close();
 
                 <div class="row">
                     <div class="label">Facility</div>
-                    <div class="value"><?php echo htmlspecialchars($booking["facility_name"]); ?></div>
+                    <div class="value"><?php echo htmlspecialchars($booking["facility_id"]); ?></div>
                 </div>
 
                 <div class="row">

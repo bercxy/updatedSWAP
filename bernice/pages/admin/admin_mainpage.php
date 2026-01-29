@@ -24,6 +24,7 @@ if (!isset($_SESSION['user_role']) || strtolower($_SESSION['user_role']) !== 'ad
     <div class="nav-bar-right">
         <a class="nav-btn" href="/booking_system/bernice/pages/admin/admin_mainpage.php">Manage</a>
         <a class="nav-btn logout" href="/booking_system/mengyao/pages/logout.php">Logout</a>
+        <a class="nav-btn" href="/booking_system/kelly/admin_queue.php">kelly</a>
     </div>
 </div>
 
